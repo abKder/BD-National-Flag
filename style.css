@@ -1,108 +1,109 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
 }
 
 .flag-container {
-    position: relative;
-    display: flex;
-    align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .flag {
-    width: 600px;
-    height: 360px;
-    background: linear-gradient(to right, #006A4E 0%, #006A4E 50%, #005A40 100%);
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform-origin: top center;
-    overflow: hidden;
+  width: 600px;
+  height: 360px;
+  background: linear-gradient(to right, #006a4e 0%, #006a4e 50%, #005a40 100%);
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform-origin: top center;
+  overflow: hidden;
 }
 
 .circle {
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, #E63946 0%, #C22E39 100%);
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    animation: pulse 2s infinite ease-in-out;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #e63946 0%, #c22e39 100%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  animation: pulse 2s infinite ease-in-out;
 }
 
 @keyframes pulse {
-    0%, 100% {
-        transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-        transform: translate(-50%, -50%) scale(1.05);
-    }
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
 }
 
 .pole {
-    position: absolute;
-    left: -30px;
-    top: 0;
-    width: 15px;
-    height: 750px;
-    background: linear-gradient(to bottom, #888 0%, #666 100%);
+  position: absolute;
+  left: -30px;
+  top: 0;
+  width: 15px;
+  height: 750px;
+  background: linear-gradient(to bottom, #888 0%, #666 100%);
 }
 
 .pole::before {
-    content: '';
-    position: absolute;
-    top: -15px;
-    left: -7px;
-    width: 30px;
-    height: 30px;
-    background: radial-gradient(circle, #999 0%, #777 100%);
-    border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -7px;
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, #999 0%, #777 100%);
+  border-radius: 50%;
 }
 
 @media (max-width: 768px) {
-    .flag {
-        width: 400px;
-        height: 240px;
-    }
-    .circle {
-        width: 140px;
-        height: 140px;
-    }
-    .pole {
-        left: -20px;
-        width: 10px;
-    }
-    .pole::before {
-        width: 20px;
-        height: 20px;
-        top: -10px;
-        left: -5px;
-    }
+  .flag {
+    width: 400px;
+    height: 240px;
+  }
+  .circle {
+    width: 140px;
+    height: 140px;
+  }
+  .pole {
+    left: -20px;
+    width: 10px;
+  }
+  .pole::before {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    left: -5px;
+  }
 }
 
 @media (max-width: 480px) {
-    .flag {
-        width: 300px;
-        height: 180px;
-    }
-    .circle {
-        width: 100px;
-        height: 100px;
-    }
-    .pole {
-        left: -15px;
-        width: 8px;
-    }
-    .pole::before {
-        width: 15px;
-        height: 15px;
-        top: -8px;
-        left: -4px;
-    }
+  .flag {
+    width: 300px;
+    height: 180px;
+  }
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+  .pole {
+    left: -15px;
+    width: 8px;
+  }
+  .pole::before {
+    width: 15px;
+    height: 15px;
+    top: -8px;
+    left: -4px;
+  }
 }
